@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Planets</title>
+</head>
+<body>
+  <h1>Planets</h1>
+  <a href="/planets/new">Add New Planet</a>
+  <ul>
+    <% planets.forEach(planet => { %>
+      <li>
+        <a href="/planets/<%= planet._id %>"><%= planet.name %></a>
+        <form action="/planets/<%= planet._id %>?_method=DELETE" method="POST">
+          <button type="submit">Delete</button>
+        </form>
+        <a href="/planets/<%= planet._id %>/edit">Edit</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

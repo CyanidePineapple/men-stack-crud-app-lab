@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Planet</title>
+</head>
+<body>
+  <h1>Add New Planet</h1>
+  <form action="/planets" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" required>
+    
+    <label for="description">Description:</label>
+    <input type="text" name="description" required>
+
+    <label for="hasLife">Has Life:</label>
+    <input type="checkbox" name="hasLife">
+
+    <button type="submit">Create Planet</button>
+  </form>
+</body>
+</html>

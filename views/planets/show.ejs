@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= planet.name %></title>
+</head>
+<body>
+  <h1><%= planet.name %></h1>
+  <p><%= planet.description %></p>
+  <p>Has Life: <%= planet.hasLife ? 'Yes' : 'No' %></p>
+  <a href="/planets/<%= planet._id %>/edit">Edit</a>
+  <form action="/planets/<%= planet._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/planets">Back to Planets</a>
+</body>
+</html>
